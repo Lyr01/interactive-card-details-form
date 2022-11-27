@@ -1,0 +1,192 @@
+:root {
+	--Red: hsl(0, 100%, 66%);
+	--White: hsl(0, 0%, 100%);
+	--Light-grayish-violet: hsl(270, 3%, 87%);
+	--Dark-grayish-violet: hsl(279, 6%, 55%);
+	--Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+.right_section {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form {
+	display: grid;
+	gap: 2rem;
+	width: 350px;
+	grid-template-areas:
+		"name name"
+		"number  number"
+		"info  info"
+		"button button";
+}
+
+label {
+	color: var(--Very-dark-violet);
+	margin-bottom: 0.3rem;
+	text-transform: uppercase;
+}
+
+input {
+	padding: 0.5rem;
+	font-size: 18px;
+	border: 1px solid var(--Dark-grayish-violet);
+	border-radius: 6px;
+}
+
+input::placeholder {
+	font-family: inherit;
+	color: var(--Dark-grayish-violet);
+}
+
+input:focus {
+	outline-color: hsl(249, 99%, 64%);
+}
+
+.grid_name {
+	grid-area: name;
+	display: flex;
+	flex-direction: column;
+}
+
+.grid_number {
+	grid-area: number;
+	display: flex;
+	flex-direction: column;
+}
+
+.grid_info {
+	grid-area: info;
+}
+
+.grid_button {
+	grid-area: button;
+	display: flex;
+	flex-direction: column;
+}
+
+.card_information > * {
+	display: grid;
+	gap: 1rem;
+	grid-template-areas:
+		"date date l-cvc"
+		"yy mm cvc";
+}
+
+.card_date {
+	grid-area: date;
+}
+
+.input_card_year {
+	grid-area: yy;
+}
+
+.input_card_year input {
+	width: 70px;
+}
+
+.input_card_month {
+	grid-area: mm;
+}
+
+.input_card_month input {
+	width: 70px;
+}
+
+.input_card_cvc {
+	grid-area: cvc;
+}
+
+.input_card_cvc input {
+	width: 100%;
+}
+
+.card_cvc {
+	grid-area: l-cvc;
+}
+
+.submit_btn {
+	color: var(--White);
+	background: var(--Very-dark-violet);
+	font-size: 18px;
+	padding: 0.5rem 0;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.final_state {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.final_state h1 {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.final_state p {
+	font-size: 18px;
+	color: var(--Dark-grayish-violet);
+}
+
+.btn_container {
+	width: 40%;
+}
+
+.final_state button {
+	width: 100%;
+	color: var(--White);
+	background-color: var(--Very-dark-violet);
+	border-radius: 6px;
+	padding: 1rem;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 1230px) {
+	.right_section {
+		padding-left: 5rem;
+	}
+	.final_state {
+		padding-left: 3rem;
+	}
+}
+
+@media only screen and (max-width: 956px) {
+	.right_section {
+		margin-top: 8rem;
+	}
+
+	.final_state {
+		padding-left: 8rem;
+	}
+}
+
+@media only screen and (max-width: 856px) {
+	.right_section {
+		padding-left: 0rem;
+	}
+	.final_state {
+		padding-top: 8rem;
+		padding-left: 0;
+	}
+	.btn_container {
+		width: 60%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.right_section {
+		margin-top: 6rem;
+	}
+	.btn_container {
+		width: 90%;
+	}
+}
