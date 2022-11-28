@@ -140,6 +140,14 @@ input:focus {
 	width: 40%;
 }
 
+.error {
+	color: var(--Red);
+}
+
+.error_input {
+	border: 1px solid var(--Red);
+}
+
 .final_state button {
 	width: 100%;
 	color: var(--White);

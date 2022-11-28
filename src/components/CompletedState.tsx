@@ -8,7 +8,7 @@ const CompletedState = () => {
 			<h1>Thank you!</h1>
 			<p> We've added your card details</p>
 			<div className="btn_container">
-				<button>Continue</button>
+				<button onClick={() => window.location.reload()}>Continue</button>
 			</div>
 		</div>
 	);
