@@ -73,7 +73,7 @@ input:focus {
 	gap: 1rem;
 	grid-template-areas:
 		"date date l-cvc"
-		"yy mm cvc";
+		"mm yy cvc";
 }
 
 .card_date {
