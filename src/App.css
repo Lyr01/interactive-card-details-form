@@ -84,8 +84,12 @@ body {
 }
 
 .attribution {
-	font-size: 11px;
+	position: absolute;
+	bottom: 2rem;
+	left: 50%;
+	font-size: 14px;
 	text-align: center;
+	padding-top: 1rem;
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
@@ -174,6 +178,12 @@ body {
 	.front_card {
 		z-index: 1;
 		transform: translate(-20%, -45%);
+	}
+
+	.attribution {
+		position: relative;
+		bottom: -1rem;
+		left: 0;
 	}
 }
 

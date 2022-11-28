@@ -69,13 +69,13 @@ function App() {
 					)}
 				</div>
 			</main>
-			{/* <div className="attribution">
+			<div className="attribution">
 				Challenge by{" "}
 				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
 					Frontend Mentor
 				</a>
 				. Coded by <a href="https://lyr01.github.io/">Hamza Khan</a>.
-			</div> */}
+			</div>
 		</div>
 	);
 }
