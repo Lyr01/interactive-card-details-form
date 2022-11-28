@@ -15,7 +15,6 @@ function App() {
 	const [cardCvc, setCardCvc] = useState("");
 	const [showFinalState, setShowFinalState] = useState(false);
 
-	console.log(cardNumber);
 	return (
 		<div className="App">
 			<main>

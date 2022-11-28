@@ -34,7 +34,13 @@ const InputController = ({
 	const [errorCvc, setErrorCvc] = useState(false);
 
 	const handleChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setCardName(e.target.value);
+		if (
+			e.target.value.length <= 30 &&
+			e.target.value.length >= 0 &&
+			e.target.value.match(/^[A-Za-z ]+$/)
+		) {
+			setCardName(e.target.value);
+		}
 	};
 	const handleChangeNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
 		if (e.target.value.length <= 16 && Number(e.target.value) >= 0) {
@@ -64,7 +70,7 @@ const InputController = ({
 		cardYear ? setErrorYear(false) : setErrorYear(true);
 		cardCvc ? setErrorCvc(false) : setErrorCvc(true);
 
-		errorNumber && errorMonth && errorYear && errorCvc
+		cardNumber.length < 16 && cardMonth && cardYear && cardCvc
 			? setShowFinalState(true)
 			: setShowFinalState(false);
 	};
@@ -81,7 +87,6 @@ const InputController = ({
 						name="card_name"
 						onChange={(e) => handleChangeName(e)}
 						value={cardName}
-						maxLength={30}
 					/>
 				</div>
 
