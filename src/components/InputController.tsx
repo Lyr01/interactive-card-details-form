@@ -48,7 +48,11 @@ const InputController = ({
 		}
 	};
 	const handleChangeMonth = (e: React.ChangeEvent<HTMLInputElement>) => {
-		if (e.target.value.length <= 2 && Number(e.target.value) >= 0) {
+		if (
+			e.target.value.length <= 2 &&
+			Number(e.target.value) >= 0 &&
+			Number(e.target.value) <= 12
+		) {
 			setCardMonth(e.target.value);
 		}
 	};
@@ -70,7 +74,7 @@ const InputController = ({
 		cardYear ? setErrorYear(false) : setErrorYear(true);
 		cardCvc ? setErrorCvc(false) : setErrorCvc(true);
 
-		cardNumber.length < 16 && cardMonth && cardYear && cardCvc
+		cardNumber.length == 16 && cardMonth && cardYear && cardCvc
 			? setShowFinalState(true)
 			: setShowFinalState(false);
 	};
