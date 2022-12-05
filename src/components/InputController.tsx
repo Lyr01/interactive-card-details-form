@@ -35,9 +35,10 @@ const InputController = ({
 
 	const handleChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
 		if (
-			e.target.value.length <= 30 &&
-			e.target.value.length >= 0 &&
-			e.target.value.match(/^[A-Za-z ]+$/)
+			(e.target.value.length <= 30 &&
+				e.target.value.length >= 0 &&
+				e.target.value.match(/^[A-Za-z ]+$/)) ||
+			e.target.value.match(/^.{0}$/)
 		) {
 			setCardName(e.target.value);
 		}
